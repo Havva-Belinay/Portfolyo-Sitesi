@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "ProjeEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Proje Ekleme Sayfası</h4>
+<form method="post">
+    <input type="text" name="Baslik" class="form-control" placeholder="Başlığı Yazınız..." />
+    <br />
+    <textarea placeholder="Açıklamanızı giriniz..." name="Aciklama" class="form-control" rows="5"></textarea>
+    <br />
+    <input type="text" name="Tarih" class="form-control" placeholder="Geliştirme Tarihi..." />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

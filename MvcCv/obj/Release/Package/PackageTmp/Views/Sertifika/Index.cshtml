@@ -1,0 +1,68 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblSertifikalarim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{ string renk = "";}
+@{ int sayac = 0;}
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Sertifika Listem</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-pane" id="timeline">
+                                    <div class="timeline timeline-inverse">
+                                        @foreach (var item in Model)
+                                        {
+                                            if (sayac % 2 == 0)
+                                            {
+                                                renk = "btn btn-success";
+                                            }
+                                            if (sayac % 2 == 1)
+                                            {
+                                                renk = "btn btn-primary";
+                                            }
+                                            <div class="time-label">
+                                                <a href="/Sertifika/SertifikaGetir/@item.ID" class="@renk">
+                                                    <span class="@renk">
+                                                        @item.Tarih
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                @*<i class="fas fa-envelope bg-primary"></i>*@
+                                                <div class="timeline-item">
+                                                    <div class="timeline-body">
+                                                        @item.Aciklama
+                                                    </div>
+                                                    <div class="timeline-footer">
+                                                        <a href="/Sertifika/SertifikaDuzenle/@item.ID" class="btn btn-dark btn-sm">Düzenle</a>
+                                                        <a href="/Sertifika/SertifikaSil/@item.ID" class="btn btn-danger btn-sm">Sil</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            sayac++;
+                                        }
+                                    </div>
+                                    <a href="/Sertifika/YeniSertifika" class="btn btn-info">Yeni Sertifika Ekleyin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
