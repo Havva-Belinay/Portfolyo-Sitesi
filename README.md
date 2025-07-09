@@ -10,7 +10,7 @@ Admin panelinde yapılan güncellemeler, siteye anlık olarak yansımaktadır.
 - **ASP.NET MVC 5**
 - **MSSQL**
 - **HTML / CSS / JavaScript**
-- **Bootstrap 5**
+- **Bootstrap**
 
 ## Site İçeriği
 
