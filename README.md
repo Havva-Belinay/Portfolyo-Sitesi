@@ -45,3 +45,8 @@ Ayrıca, admin panelinde bulunan **“Siteye Git”** butonu ile kullanıcı ara
   - **Aktif** → “Aktif” yazısı
   - **Pasif** → “Pasif” yazısı ile etiketlenmiştir.
 
+---
+
+Ekran görüntülerine screenshots klasöründen ulaşabilirsiniz.
+
+---
